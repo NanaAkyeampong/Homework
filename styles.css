@@ -1,0 +1,234 @@
+body {
+  font-family: "Georgia, 'Times New Roman', Times, serif;";
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+}
+.hero {
+  background-color: none;
+  color: purple;
+  font-size: larger;
+}
+.button {
+  background-color: blueviolet;
+}
+/* headings */
+h2 {
+  color: purple;
+  font-size: 24px;
+}
+/* links */
+a {
+  color: purple;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* lists */
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid white;
+}
+
+/* buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: pink;
+  border: none;
+  cursor: pointer;
+}
+.button {
+  background-color: rgb(207, 124, 207);
+}
+
+/* forms */
+input [type="text"] input [type="email"] textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+/* containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* box shadow */
+.card {
+  box-shadow: 0 4px 8px rgb(238, 224, 227);
+  padding: 20px;
+}
+/* background image */
+.hero {
+  background-image: url(https://care1sthomecare.co.uk/wp-content/uploads/2020/07/homeCareVisits-2-scaled.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white
+  text-align: center;
+  padding: 200px 0;
+}
+/* flexbox layout */
+flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* responsive design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto repeat (3, 150px) auto;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar main main"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+.grid-item {
+  background-color: mediumpurple;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  background-color: mediumpurple;
+  color:white;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: mediumpurple;
+  color: white;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: mediumpurple;
+  color: white;
+}
+
+.main {
+  grid-area: main;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+}
+
+.transition-box {
+  width: 100px;
+  height: 100px;
+  background-color: plum;
+  transition: width 1s ease-in-out, height 1s ease-in-out,
+    background-color 1s ease-in-out;
+}
+
+.transition-box:hover {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  object-position: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animation-box {
+  width: 200px;
+  height: 200px;
+  background-color: plum;
+  animation: rotate 6s linear infinite;
+  margin: 75px;
+  border:10px solid purple;
+  
+}
+
+.hover-button {
+  width: 200px;
+  height: 100px;
+  font-size: 25px;
+  background-color: plum;
+  color: white;
+  padding: 15px;
+  border: 10px solid purple
+  border-color: blueviolet;
+  border-radius: 40px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.hover-button:hover {
+  background-color: purple;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.animation-hover-button:hover {
+  animation: shake 0.5s ease infinite;
+
+}
+
+:root {
+ --main-color: purple;
+ --border-radius: 4px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
